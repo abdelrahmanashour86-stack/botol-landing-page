@@ -563,6 +563,7 @@ footer {
 .links ul li a {
     color: white;
     font-size: 20px;
+    display: block;
 }
 
 .links ul{
@@ -599,7 +600,9 @@ footer .icon {
     justify-content: center;
 
 }
-
+footer ul li a{
+    display: block;
+}
 @media (max-width:1280px) {
     .btns {
         width: 0px;
