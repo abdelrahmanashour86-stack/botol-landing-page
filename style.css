@@ -12,7 +12,6 @@
 
 
 nav {
-    margin: 0 auto;
     width: 100%;
     height: 80px;
     display: flex;
@@ -24,7 +23,8 @@ nav {
     backdrop-filter: blur(15px);
 
 }
-.mob-nav{
+
+.mob-nav {
     position: relative;
     top: -5px;
     right: 50px;
@@ -61,7 +61,8 @@ ul li a {
     text-transform: capitalize;
 
 }
-ul li:hover a{
+
+ul li:hover a {
     background-color: #4e4e4e47;
 }
 
@@ -74,9 +75,11 @@ button {
     color: white;
     cursor: pointer;
 }
-button:hover{
+
+button:hover {
     background: #255a66;
 }
+
 .main {
     margin-top: 10%;
     width: 100%;
@@ -336,9 +339,11 @@ button:hover{
     counter-reset: counter;
     backdrop-filter: blur(25px);
 }
-.about-right .features p{
+
+.about-right .features p {
     width: 75%;
 }
+
 .about-right .features .feature {
     width: fit-content;
     min-height: 128px;
@@ -428,8 +433,9 @@ button:hover{
     appearance: none;
     overflow: hidden;
 }
+
 .click:hover::before {
-    background-color:#4e4e4e7b;
+    background-color: #4e4e4e7b;
     color: white;
 }
 
@@ -550,12 +556,18 @@ footer {
 .top,
 .bottom {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
 }
 
 .links ul li a {
     color: white;
     font-size: 20px;
+}
+
+.links ul{
+    display: flex;
+    flex-wrap: wrap;
 }
 
 footer p {
@@ -587,6 +599,7 @@ footer .icon {
     justify-content: center;
 
 }
+
 @media (max-width:1280px) {
     .btns {
         width: 0px;
@@ -603,44 +616,157 @@ footer .icon {
         padding-top: 80px;
         gap: 100px;
     }
-    .btns ul{
+
+    .btns ul {
         flex-direction: column;
     }
-    .btns ul li a{
+
+    .btns ul li a {
         padding: 20px 80px;
         display: block;
     }
-    .logo{
+
+    .logo {
         width: 100%;
         display: flex;
         justify-content: center;
         align-items: center;
     }
-    .mob-nav{
+
+    .mob-nav {
         display: block;
         transition: 1s;
     }
 }
 
-@media (max-width:800px) {
-    .product{
-        width: 41%;
+@media (max-width: 1024px) {
+    .circle {
+        width: 90vw;
+        height: 90vw;
     }
-    .aboutus{
-        flex-direction: column;
-    }
-    .about-left{
-        width: 95%;
-    }
-    .about-right{
+
+    .circle h2 {
+        font-size: 60px;
         width: 90%;
+    }
+
+    .btl {
+        width: 100px;
+        height: 100px;
+        padding: 10px;
+    }
+
+    .features-content {
+        padding: 0 0 0 5%;
+        gap: 30px;
     }
 }
-@media (max-width:600px) {
-    .product{
+
+@media (max-width:800px) {
+    .circle h2 {
+        font-size: 45px;
+    }
+
+    .circle p {
+        font-size: 20px;
+    }
+
+    .product {
+        width: 41%;
+    }
+
+    .aboutus {
+        flex-direction: column;
+    }
+
+    .about-left {
+        width: 95%;
+    }
+
+    .about-right {
         width: 90%;
     }
-    .product-content{
+
+    .features {
+        min-height: 400px;
+        height: 60vh;
+        display: flex;
+        overflow: hidden;
+    }
+
+    .features .left,
+    .features-content {
+        width: 50%;
+        height: 100%;
+    }
+
+    .bottle {
+        position: absolute;
+        height: 50%;
+        right: 0%;
+        bottom: 0%;
+        transform: translate(50%, -20%);
+
+    }
+
+    .bottle img {
+        height: 300px;
+
+    }
+
+    .features-content {
+        background-color: #20292c;
+        color: white;
+        display: flex;
+        padding: 0 10px 0 15px;
+        flex-direction: column;
         justify-content: center;
+        align-items: flex-start;
+    }
+
+    .feature {
+        gap: 10px;
+    }
+
+    .feature .logo {
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: white;
+        border-radius: 50%;
+        width: 40px;
+        aspect-ratio: 1/1;
+        position: relative;
+
+
+    }
+
+    .feature .logo img {
+        width: 50%;
+        left: 50%;
+        transform: translate(-50%, 0);
+    }
+
+    .feature h3 {
+        font-size: 16px;
+    }
+}
+
+
+
+@media (max-width:600px) {
+    .product {
+        width: 90%;
+    }
+
+    .product-content {
+        justify-content: center;
+    }
+
+    .bottles {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
     }
 }
